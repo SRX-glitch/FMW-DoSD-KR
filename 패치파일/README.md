@@ -64,6 +64,8 @@ Fantasy Maiden Wars DoSD\
 | 「원본 파일이 맞지 않습니다」 | 1번(무결성 검사)을 한 뒤 다시 `install.bat` 실행 |
 | 「xdelta\xdelta.exe 가 없습니다」 | zip을 **전부** 풀었는지 확인 (폴더째 풀어야 함) |
 | 「게임 폴더가 아닙니다」 | `fmw_dosd.exe` 가 있는 폴더에 풀었는지 확인. 다른 곳에 풀었다면 게임 폴더를 `install.bat` 위로 끌어다 놓기 |
+| 창이 잠깐 떴다가 바로 꺼짐 | 2026-09-27 이전에 받은 zip의 버그입니다(게임이 `C:\Program Files (x86)\` 에 있을 때). **zip을 다시 받아** 주세요. |
+| 「액세스가 거부되었습니다」 | `install.bat` 우클릭 → **관리자 권한으로 실행** |
 
 파일별 적용 위치와 수동 설치 방법(xdeltaUI 사용)은 zip 안의 `README.txt` 에 있습니다.
 

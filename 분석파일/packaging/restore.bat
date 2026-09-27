@@ -12,7 +12,7 @@ if "%GAME%"=="" (
 )
 if not "%GAME:~-1%"=="\" set "GAME=%GAME%\"
 set "BK=%GAME%backup_before_kr\"
-if not exist "%BK%data.win" ( echo [오류] 백업이 없습니다: %BK% & pause & exit /b 1 )
+if not exist "%BK%data.win" goto :nobackup
 
 copy /y "%BK%data.win" "%GAME%data.win" >nul
 copy /y "%BK%data\*" "%GAME%data\" >nul
@@ -24,3 +24,10 @@ if exist "%BK%LocalAppData\mods" xcopy /e /i /q /y "%BK%LocalAppData\mods" "%LA%
 if exist "%BK%LocalAppData\addOns" xcopy /e /i /q /y "%BK%LocalAppData\addOns" "%LA%addOns" >nul
 echo 원본으로 복원했습니다.
 pause
+exit /b 0
+
+:nobackup
+echo [오류] 백업이 없습니다:
+echo        "%BK%"
+pause
+exit /b 1

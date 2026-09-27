@@ -16,7 +16,8 @@ set "XD=%HERE%xdelta\xdelta.exe"
 set "PT=%HERE%patch\"
 
 if not exist "%XD%" ( echo [오류] xdelta\xdelta.exe 가 없습니다. 압축을 전부 풀었는지 확인하세요. & goto :fail )
-if not exist "%GAME%fmw_dosd.exe" ( echo [오류] 게임 폴더가 아닙니다: %GAME% & goto :fail )
+rem 주의: 경로에 괄호가 들어갈 수 있으므로(Program Files (x86)) ( ) 블록 안에서 경로 변수를 따옴표 없이 쓰지 말 것
+if not exist "%GAME%fmw_dosd.exe" goto :notgame
 if not exist "%PT%data.win.xdelta" ( echo [오류] patch 폴더가 없습니다. & goto :fail )
 
 set "TMPD=%GAME%_kr_patch_tmp\"
@@ -59,6 +60,11 @@ echo 게임 안 글로벌 메뉴 - 「모드」 에서 모드를 켜고 끌 수 
 pause
 exit /b 0
 
+:notgame
+echo [오류] 게임 폴더가 아닙니다. fmw_dosd.exe 가 없습니다:
+echo        "%GAME%"
+goto :fail
+
 :srcfail
 echo.
 echo [오류] 원본 파일이 맞지 않습니다. 이미 패치했거나 영어판 1.2.4 원본이 아닙니다.
@@ -66,5 +72,6 @@ echo        Steam에서 「로컬 파일 무결성 검사」를 한 뒤 다시 �
 if exist "%TMPD%" rmdir /s /q "%TMPD%"
 :fail
 echo 설치를 중단했습니다.
+echo 파일 복사 중 "액세스가 거부되었습니다" 가 보였다면 install.bat 을 우클릭 - 관리자 권한으로 실행 해 보세요.
 pause
 exit /b 1
