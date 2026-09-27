@@ -1,0 +1,41 @@
+name: 설치 문제
+description: install.bat 실행이 안 되거나, 설치 후 게임이 실행되지 않을 때
+title: "[설치] "
+labels: ["설치"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        설치 전에 [설치 방법](https://github.com/SRX-glitch/FMW-DoSD-KR/blob/main/패치파일/README.md)의 **문제 해결** 표를 먼저 확인해 주세요.
+  - type: dropdown
+    id: step
+    attributes:
+      label: 어느 단계에서 문제가 생겼나요?
+      options:
+        - 압축 풀기
+        - install.bat 실행 중
+        - 설치는 끝났는데 게임이 실행되지 않음
+        - 게임은 실행되지만 한글이 깨짐 / 영어로 나옴
+        - restore.bat (제거)
+        - 기타
+    validations:
+      required: true
+  - type: textarea
+    id: message
+    attributes:
+      label: 오류 메시지 / 증상
+      description: install.bat 창에 나온 문구를 그대로 복사하거나 스크린샷을 붙여 주세요.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 확인 사항
+      options:
+        - label: 설치 전에 Steam 「게임 파일 무결성 검사」를 했습니다.
+        - label: zip 파일을 게임 폴더(fmw_dosd.exe 가 있는 곳)에 전부 풀었습니다.
+  - type: input
+    id: env
+    attributes:
+      label: 환경 (선택)
+      description: 예) Windows 11, 게임 설치 경로가 D 드라이브

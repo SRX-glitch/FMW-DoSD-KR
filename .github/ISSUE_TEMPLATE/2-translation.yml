@@ -1,0 +1,46 @@
+name: 오역 · 표시 문제
+description: 오역, 번역 누락(영어로 남음), 글자 깨짐, 글자가 칸을 벗어남 등
+title: "[번역] "
+labels: ["번역"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 어떤 문제인가요?
+      options:
+        - 오역 / 어색한 표현
+        - 번역 누락 (영어·일본어로 나옴)
+        - 글자 깨짐 (□, 빈칸 등)
+        - 글자가 칸을 벗어나거나 잘림
+        - 기타
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: 어디서 나왔나요?
+      options:
+        - 스토리 대화 / 이벤트
+        - 전투 대사
+        - 메뉴 · 설정 화면
+        - 모드 설정 창 (글로벌 메뉴 → 모드)
+        - 유닛 · 무기 · 스킬 · 아이템 이름/설명
+        - 전투 정보 화면
+        - 기타
+    validations:
+      required: true
+  - type: textarea
+    id: screen
+    attributes:
+      label: 스크린샷
+      description: 문제가 보이는 화면을 붙여 주세요. (가장 도움이 됩니다)
+  - type: textarea
+    id: text
+    attributes:
+      label: 현재 문구 → 제안 문구
+      description: 예) 「베어내기 확률」 → 「베어내기 발동률」
+  - type: input
+    id: context
+    attributes:
+      label: 상황 (선택)
+      description: 예) 제 12 화, 레이무 vs 치르노 전투, 인터미션 강화 메뉴

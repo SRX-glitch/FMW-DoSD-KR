@@ -66,3 +66,9 @@ Fantasy Maiden Wars DoSD\
 | 「게임 폴더가 아닙니다」 | `fmw_dosd.exe` 가 있는 폴더에 풀었는지 확인. 다른 곳에 풀었다면 게임 폴더를 `install.bat` 위로 끌어다 놓기 |
 
 파일별 적용 위치와 수동 설치 방법(xdeltaUI 사용)은 zip 안의 `README.txt` 에 있습니다.
+
+## 제보 · 피드백
+
+위 표로 해결되지 않거나 오역·번역 누락을 발견하면
+**[Issues에 제보하기](https://github.com/SRX-glitch/FMW-DoSD-KR/issues/new/choose)** → 「설치 문제」 또는 「오역 · 표시 문제」 양식을 골라 주세요.
+스크린샷을 함께 올려 주시면 가장 빨리 확인할 수 있습니다. (GitHub 로그인 필요)

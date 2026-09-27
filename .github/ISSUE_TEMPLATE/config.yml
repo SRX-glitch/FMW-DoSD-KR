@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 설치 방법 보기
+    url: https://github.com/SRX-glitch/FMW-DoSD-KR/blob/main/패치파일/README.md
+    about: 설치 순서와 문제 해결 표를 먼저 확인해 주세요.
