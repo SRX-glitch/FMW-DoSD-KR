@@ -1,0 +1,5 @@
+# 패치 패키지는 바이트 그대로 (SHA1SUMS.txt 가 맞도록 줄바꿈 변환 금지)
+패치파일/** -text
+*.bat binary
+*.xdelta binary
+*.exe binary

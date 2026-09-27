@@ -1,0 +1,1838 @@
+[
+{
+"kind": "desc",
+"src": "experimental_mods/Debugging/ResetEventFlags.json",
+"en": "Reset chapter-dependent event flags every time\nthe Intermission is saved and reloaded,\nand set them to true.\n\nWARNING: This will remove characters from the\nroster that are obtained by hitting certain\nevent flags, like on-field Akyu/Lily Black/classic\nReimu & Marisa. Please be cautious when utilizing\nthis mod to test event flags by chapter.",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Audio/ChangeIntermissionBGM.json",
+"en": "Change the BGM that plays \nduring the Intermission\nInput the internal name of the song \nexcluding the loop point \nReload your saves to apply BGM changes \nRequires the EnableLayeredFS mod to be active\n\n(Default internal name is bgm_gen_intermission2)",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Audio/DisableLvlUpJingle.json",
+"en": "Disable level up jingle SE",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/BugFixes/BarrierAnimationFix.json",
+"en": "Fix file wildcard matching and unit_code/char_code\nmismatches causing the game to display barriers\nincorrectly for certain units.\n\nRecommended to be enabled alongside\ngraphic files loaded through LayeredFS\n\nDisable this mod if barrier graphics are not\nappearing for certain units",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/BugFixes/CombInfiniteFix.json",
+"en": "Fix infinite turns bug with combined units \nby tracking turn count between \nsplitting and recombining\nMay not be stable if toggled repeatedly \nbetween turns throughout a chapter",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/BugFixes/DialogFixForForms.json",
+"en": "Fix dialog bug where\nKeine's/Byakuren's/Lily White's UnitID\nis displayed in text scripts\ninstead of their typical name",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/BugFixes/FixSpiritChoreography.json",
+"en": "Fix choreography for spirit animations to match up\nwith SE at original 1x frame speed.\nSpeed up will still play at CB's default 1.5x\nspeed to not compromise gameplay speed",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Debugging/DisplayInternalName.json",
+"en": "Display internal unit_data/character_data IDs \nin unit/character status screens",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Debugging/EnableDebugMenu.json",
+"en": "Enable Debug Menu\n\nNOTE: Make frequent backup saves.\nThe Debug Menu may not be fully stable when\nmodifying in-game save values and may crash.\nAdditionally, certain Debug Menu actions like the\nChapter Select may irreversibly modify your units;\nplease be cautious when using this tool.",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/FileSystem/EnableLayeredFS.json",
+"en": "Enable custom loading of data file resources \nfrom modData folder\n\nSome updates to data files require \nrestarting the game",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Mechanics/AceKillBonus.json",
+"en": "Restore +5 initial Power bonus for 50 kills\nand #1 Ace kills",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Mechanics/DisableBattleInfoSpirits.json",
+"en": "Disable casting spirits in the Battle Info screen",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Mechanics/FMW4SPMechanics.json",
+"en": "Restore FMW4 SP mechanics\n- SP Regen skill only works in 1st 10 turns\n- Disable universal +10 SP Regen\n- SP is not initially halved\n- Regen text is updated to account for changes\nReload saves to update SP mechanics \non various screens",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Mechanics/FMW4SongMechanics.json",
+"en": "Restore Mystia's Song mechanics from FMW4\nNOTE: FMW4 song buffs are limited to \n1 type active at a time.\nFuture songs will overwrite the previous buff, \nif applicable.\nSong effects below (w/o Valor/Songstress boost)\n\n\n\n\n\n- SotnS: Accuracy/Evade stats +30\n-- MAP: Centered-radius, targets Team\nAccuracy/Evade +20\n- HotHO: Defense stat +30/Skill stat +15 \n-- MAP: Centered-radius, Defense +20/Skill +10 \n- MCM: Cqb/Range/Accuracy stats +40 \n-- MAP: Centered-radius\nCqb/Range/Accuracy +20",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Mechanics/MoveAirMPCost.json",
+"en": "Restore MP cost for movement in Air Terrain\nThe Shimenawa regains its original effect\nto nullify MP cost for movement in Air",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Mechanics/NullifyBunshinGraze.json",
+"en": "Nullify Graze damage when Bunshin\nor similar effects activate, mirroring the mechanic\nin FMW1",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Mechanics/Restore1.0AssistPenalty.json",
+"en": "Restore 0.70x assist attack penalty for 1.0 cost\nunits, matching the behavior back in FMW4",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Mechanics/RestoreEnemyCrit.json",
+"en": "Restore the ability for enemies to deal critical hits\nAdditionally, revert to OG FMW crit calculations\nwhere final enemy critical rate is halved",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Mechanics/RestoreRevengeStorage.json",
+"en": "Restore the Revenge Storage mechanic\npresent in the original games.\nThe Revenge damage multiplier can be retained\non a frontline unit as long as the unit avoids\nattacking. This also applies to Support Attacks.\n\nNOTE: Suspend Saves do not track\nstored Revenge multipliers; stored revenge boosts\nwill be wiped after reloading\n\n\nAdditionally, the Revenge multiplier will now show\nin the damage calculation if the stored\nRevenge boost is greater than 0",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Mechanics/SwitchBarrierMode.json",
+"en": "Input 0 or 1 to modify barrier behavior\nduring Graze.\nModes:\n- Default (0): Barriers can activate and consume\nMP in all calculated damage scenarios\nincluding Graze, Hit, and Defend\n- OG FMW (1): Barriers only activate and consume\nMP on Hit and Defend\n\n\n\n\nThe projected barrier sprite in the Battle Info\nscreen only appears when the unit's barrier can\nsuccessfully nullify/reduce damage,\nwith the projection assuming the unit is unfocused.\nWhen selecting the OG FMW option,\nbe wary when barriers do not activate during Graze",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Mechanics/TriggerPersistGraze.json",
+"en": "Restore functionality for the Persist (Grit) spirit\nto trigger on Graze",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Modifiers/BreakTakemikazuchiLimit.json",
+"en": "This divine lightning shall pierce the skies!\n\n(Remove the exponential damage cap from \nplayer Yorihime's Takemikazuchi \nand set formula to Normal+ and above \nenemy version)",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Modifiers/DeploymentCost.json",
+"en": "Modify deployment cost \n(Set to -1 for default cost)\n(Set to 500 or higher for infinite cost)\nMin:-1, Max:999\nReload your saves for the updated cost to apply.",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Modifiers/EnableAllSecretUnits.json",
+"en": "Set all event flags to true to unlock Lily Black,\non-field Akyu, and the classic forms\nfor Reimu and Marisa\n\nTurn the mod on and you will always play out\nthese secret unit events regardless\nof any other circumstances\nDisable the mod to return to the default behavior\nfor checking these event flags",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Modifiers/EnableAllUnitsNG+.json",
+"en": "Enable all units for NG+ \nReload the NG+ unit carryover screen \nfor the new units to appear",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Modifiers/RestoreWaveFan.json",
+"en": "Restore the range of the Waveguider Fan\nMAP attack to match the version\npresent in early FMW4 patches",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/QoL/DisplayExceededEternity.json",
+"en": "Display whether the Exceeded Eternity effect\nis active",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/QoL/DisplayNumActions.json",
+"en": "Display number of actions for frontline/backline\nunits in the unit subwindow",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/QoL/DisplayTerrainIcons.json",
+"en": "Display the current terrain in the unit subwindow",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/QoL/DynamicRegenDisplay.json",
+"en": "Dynamically update values for regen\nthroughout UI menus",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/QoL/ForceSuspendDialog.json",
+"en": "Input a suspend dialog entry number to force the \nnext suspend save to play that entry. \n(Set to -1 for default suspend behavior)\nMin:-1, Max:82, entry number is indexed from 0",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/QoL/FriendshipStatus.json",
+"en": "Display Friendship Level of current frontline \nand/or backline unit in Battle Info",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/QoL/MoveParryShieldIcons.json",
+"en": "Move Parry/Shield Defense icons in unit status\nto prevent overlap with buff/debuff UI elements",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/QoL/ReactionStatus.json",
+"en": "Display parry/shield defense/counter chance \nof current ally/enemy frontline unit in Battle Info",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/QoL/ReallocateFUB&EXB.json",
+"en": "Enable reallocating Full Upgrade Bonus/EX Bonus\nfor characters in the upgrade menu",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Visual/ChangeArmyName.json",
+"en": "Change army name global variable \n(Default internal name is \"Fantasy Maiden Wars\")",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Visual/ChangeDanmakuColor.json",
+"en": "Change tile color for generic danmaku fields.\nInput 3 comma-separated real numbers \nto control the R,G,B values of the displayed color.\nFor example, inputting 255,165,0 will display \norange tiles.\n\nInputs with an invalid format will fallback\nto the default color.\nInput \"default\" to display the default color",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Visual/ChangeSpellColor.json",
+"en": "Change tile color for spellcard danmaku fields.\nInput 3 comma-separated real numbers \nto control the R,G,B values of the displayed color.\nFor example, inputting 255,165,0 will display \norange tiles.\n\nInputs with an invalid format will fallback\nto the default color.\nInput \"default\" to display the default color\n\n\nRegenerate the spellcard danmaku field\nto view the color change",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Visual/ChangeUnitTileColor.json",
+"en": "Change tile color for unit interactions.\nInput 3 comma-separated real numbers \nto control the R,G,B values of the displayed color.\nFor example, inputting 255,165,0 will display \norange tiles.\n\nInputs with an invalid format will fallback\nto the default color.\nDefault red color is 233,33,33",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Visual/DisplayFPMTextColor.json",
+"en": "Restore colored text for Full Power Mode\nin unit menu",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Visual/RestoreRenewReviveAnim.json",
+"en": "Restore the unused FMW4 spirit casting\nanimations for Renew and Revive",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Visual/ToggleAnimationMessages.json",
+"en": "Toggle displaying messages in animation,\nlike Barrier names, Critical Hits, Buffs/Debuffs, etc.",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Visual/ToggleCut-ins.json",
+"en": "Toggle cut-in graphics in animation",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Visual/ToggleDamageNumbers.json",
+"en": "Toggle displaying damage number graphics\nin animation",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Visual/ToggleHPMPBarAnim.json",
+"en": "Toggle HP/MP bar display in animation",
+"ko": ""
+},
+{
+"kind": "desc",
+"src": "mods/Visual/ToggleWindowAnim.json",
+"en": "Toggle message window display in animation",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Alice_H/dialog_text_Alice/SeekerWireDialog.json",
+"en": "I wonder how many of these I can control at the same time.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Alice_H/dialog_text_Alice/StrawDollDialog.json",
+"en": "This will be a cinch.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Alice_H/dialog_text_Alice/StrawDollDialog.json",
+"en": "Form up!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Alice_H/dialog_text_Alice/StrawDollDialog.json",
+"en": "Surround them all!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Alice_H/dialog_text_Alice/StrawDollDialog.json",
+"en": "...Don't let a single one escape!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You massive pervert!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You bunch of lolicons!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You twintailer!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You wearing a school swimsuit under that!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You tsundere!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You had a growth spurt!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You beloved character!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...I'm totally, like, Marisa, ze!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You're the icon again!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Where's your girlishness!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You tempting teacher!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...I like it when you're polite!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Teacher, I have a question!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...What kinda extracurricular activities are you doing!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You donations shrine maiden!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...When did you start showing off your armpits!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Popular lately, aren't ya!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...What happened to your sliding!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You myon!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Your speech patterns still ain't settled!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You're polite even towards fairies!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Is that so!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Wa~ha!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...So damn immature!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You sleepyhead!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...When did you become the scheming type!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...One of the straight bangs members, huh!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Surprisingly shy, aren't you!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Those slippers are the problem!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You twin drills!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Squishy squishy cheeks!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Your cheeks go squish squish!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Where were you in the Popularity Poll again!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...So your ears were like that!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Be more honest!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Saruno!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...\\Atai/!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You can so write hiragana!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...So you become the loli character!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Comparisons to other vampires must be tough!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You atai!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You're the traditional type!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You side ponytailer!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Tell us your real name!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Too bad, Cirno's over there!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Welcome back, master!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Eat my hip!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Good work!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...I don't care if it's the clothes making you look slender!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You have blood to cough out!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...When did you suddenly start speaking politely!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Blush moar!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Been a long time since you were #1!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You haven't eaten for three days!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You're better without those pants!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You don't talk like a stereotypical Chinese!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Ehehe!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...The little sister character!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...I'm your big bro!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...You little devil!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Sidelong glances belong to you!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...Which ears are the real ones!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...A succubus is fine too!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Evileye/dialog_text_Evileye_en/EvileyeFMW1Text.json",
+"en": "...When's your crouching block coming!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Flan/dialog_text_Flan/ScarletFOKText.json",
+"en": "I'll rip you to shreds!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Flan/dialog_text_Flan/ScarletFOKText.json",
+"en": "Ehehe... Gotcha.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Flan/dialog_text_Flan/ScarletFOKText.json",
+"en": "Smash!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Flan/dialog_text_Flan/ScarletFOKText.json",
+"en": "You can't run from me.",
+"ko": "내게서 도망칠 수는 없어!"
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Flan/dialog_text_Flan/ScarletFOKText.json",
+"en": "See... I caught you.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Flan/dialog_text_Flan/ScarletFOKText.json",
+"en": "Break!",
+"ko": "파!"
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Flan/dialog_text_Flan/ScarletFOKText.json",
+"en": "All right, I have you cornered now!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Flan/dialog_text_Flan/ScarletFOKText.json",
+"en": "Hehe... Are you ready?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Flan/dialog_text_Flan/ScarletFOKText.json",
+"en": "Disappear!",
+"ko": "사라져 버려!!"
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Flan/dialog_text_Flan/ScarletFOKText.json",
+"en": "I'll smash you up... all of you.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Flan/dialog_text_Flan/ScarletFOKText.json",
+"en": "You're all out of line!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Flan/dialog_text_Flan/ScarletFOKText.json",
+"en": "You're scared of me, I know!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Let's go!",
+"ko": "간다아─!"
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I... have come!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Everyone only cares about the war!\nWhy doesn't anyone want to understand each other!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I will... I will protect everyone!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I have something I want to protect, so I will fight!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Dad, Mom... Watch over me!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I'm still alive! I can still fight!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "The pain is nothing compared to her tears...!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I saw her just now... Was she... crying...?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I'm feeling great! I'm charging in!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I'll say a prayer for you.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Your fate has been sealed.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Feel the difference in power between us!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Energy charged 100%... Commence assault!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I'm gonna tear a hole in your body!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Take thiiiiis!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Jumping in front of me without practice!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Ahh, geez!\nIf you don't understand, I'm going to make you!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Wahhhh! My body's heating up!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I'll make it painless for you.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I keep telling you not to go too far ahead!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Heh heh... You're a cute one, li'l missy.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Guess I'm accompanying you to the depths of Hell.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "There, there, theeere!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Don't hate me for this, but I'll have to shoot you down.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "You think you can keep track of all my bullets!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "You... You fool!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "If shooting you down will end the war... I'll do it!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Hit, hit! I need you to hit! Wahhhh!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Why's a girl like you on the battlefield!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Don't come near, you idiot!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Hanging around there like that...\nYou're just begging to be hit!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Don't come! I'll have to shoot if you do!\n...Dammit, too late!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Hmph, were you seized by fear? How sad.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Shoot when you're shot at. It's a simple policy, no?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Gwahhhh! Why do you want war so much!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "There are people who will cry if you die, right!? So don't come here!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Why do you keep firing!? Aren't you and I both humans!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Shoot down whatever appears before you.\nThat was what I was taught as far back as I can remember.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Is this the only way...? The war won't end unless I fight...?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I told you to stop!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I don't like war! I hate it! But...!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Don't come any closer! Wahhhh!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Adults are always like this!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Was that... a girl's voice...?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "You can shoot at me all you want, you still won't be able to stop me.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "You're the one at fault... You shot at me first!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "You fool! If you shoot, I have to shoot back!\nWhy don't you understand that!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "A d-direct hit!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Ooh~! I felt that one~!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Whoa, a direct hit!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "That's how it begins... people die, people seek revenge for them, and the cycle continues!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I said to stop shooting!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "The chain of sorrow will never end if you keep on firing!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Ugh! T-That hurt... But everyone in the world is hurting right now!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Why do fellow humans have to shoot at each other!? Why must we inflict so much pain!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Your attack has no feeling in it, it won't hurt me!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Oh, how striking. No, not your attack. You.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "That was painful... But shooting must've been just as painful for you, right!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "You want a war that badly!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Everyone worked together for this peace, how could you!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "You think the war will end if you shoot me down? You're wrong!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Ah man... This is what I get for looking away.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "An arm or two isn't that important!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Dammit... The engine's hit!?",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Wounds all over... Now this is interesting!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Too bad, I'm not done yet!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I bet you thought I was down.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Dad... Mom... it huuurts...!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I won't fall here! I'll stand up... I'll stand up and go back to her!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "More! Kick me more!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Aim a bit lower!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "If your cheek gets kicked, turn the other cheek...",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "...That's one of my granduncle's lines.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "My life isn't worth much, but it's not cheap enough to let myself lose it to you!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "She told me to come back alive.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "If you're not taking this seriously, get off the battlefield!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Can I withstand this...? No, I HAVE to withstand this!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Haha, life is short, isn't it... Uwahhhhhh!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Thank you. Now I can be at her... side...",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "This makes me the 108th person you've killed!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Remember this.\nEven if you defeat me, a second, then a third kedama will take my... ",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "O-Ohhhhh!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "I... really didn't care about the war. As long as I could help her... ",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "But now... that's no longer...",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "U-Uwaahhhhh!!",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Getting kicked by a hot chick should be cherished forever...",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "...That's one of my great-grandfather's lines.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Sorry, I prefer younger women.",
+"ko": ""
+},
+{
+"kind": "dialog.Dialog",
+"src": "data4/Kedama/dialog_text_Kedama_en/KedamaFMW1Text.json",
+"en": "Hmph, adios.",
+"ko": ""
+},
+{
+"kind": "data.Name",
+"src": "data4/data_char_all/Evileye01Char.json",
+"en": "Evil Eye",
+"ko": "이블아이"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_char_all/FMW4Youmu01Char.json",
+"en": "Youmu (FMW4)",
+"ko": ""
+},
+{
+"kind": "data.Name",
+"src": "data4/data_char_all/InsectC01Char.json",
+"en": "Makai Insect",
+"ko": "마계충"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_char_all/Kappa01Char.json",
+"en": "Kappa",
+"ko": "캇파"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_char_all/Kedama01Char.json",
+"en": "Kedama",
+"ko": "털구슬"
+},
+{
+"kind": "data.NameShort",
+"src": "data4/data_unit_all/AliceHouraiUnit.json",
+"en": "Alice",
+"ko": "앨리스"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_unit_all/AliceHouraiUnit.json",
+"en": "Alice Margatroid (Hourai Equipment)",
+"ko": ""
+},
+{
+"kind": "data.NameShort",
+"src": "data4/data_unit_all/Evileye01Unit.json",
+"en": "Evil Eye",
+"ko": "이블아이"
+},
+{
+"kind": "data.NameShort",
+"src": "data4/data_unit_all/FMW4Youmu01Unit.json",
+"en": "Youmu",
+"ko": "요우무"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_unit_all/FMW4Youmu01Unit.json",
+"en": "Youmu Konpaku (FMW4)",
+"ko": ""
+},
+{
+"kind": "data.NameShort",
+"src": "data4/data_unit_all/InsectC01Unit.json",
+"en": "Makai Insect",
+"ko": "마계충"
+},
+{
+"kind": "data.NameShort",
+"src": "data4/data_unit_all/Kappa01Unit.json",
+"en": "Kappa",
+"ko": "캇파"
+},
+{
+"kind": "data.NameShort",
+"src": "data4/data_unit_all/Kedama01Unit.json",
+"en": "Kedama",
+"ko": "털구슬"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/AliceHourai01Weps.json",
+"en": "Kick",
+"ko": "킥"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/AliceHourai01Weps.json",
+"en": "Doll Placement",
+"ko": "인형조창"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/AliceHourai01Weps.json",
+"en": "Return Inanimateness",
+"ko": "리턴 인애니메이트니스"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/AliceHourai01Weps.json",
+"en": "Doll's War",
+"ko": "돌즈 워"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/AliceHourai01Weps.json",
+"en": "Seeker Wire",
+"ko": ""
+},
+{
+"kind": "data.Special",
+"src": "data4/data_weapon_all/AliceHourai01Weps.json",
+"en": "Unique, does not damage Doll units\\nRange increases if Doll units are within Max Range\\nCan chain up to 2 unique Doll units in path",
+"ko": ""
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/AliceHourai01Weps.json",
+"en": "Straw Doll Kamikaze",
+"ko": ""
+},
+{
+"kind": "data.Special",
+"src": "data4/data_weapon_all/AliceHourai01Weps.json",
+"en": "Damage increases depending on the number\\nof Doll units at full HP\\nAfterwards, applies Recoil damage to full HP Dolls",
+"ko": ""
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/AliceHourai01Weps.json",
+"en": "Proto Malice Cannon",
+"ko": "프로토 마리스포"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/AliceHourai02Weps.json",
+"en": "Malice Cannon",
+"ko": "마리스포"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/EvilEye01Weps.json",
+"en": "Evil Light Charge",
+"ko": "이블 라이트 차지"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/EvilEye01Weps.json",
+"en": "Mega Parteyecle Cannon",
+"ko": "눈깔입자포"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/FMW4Youmu01Weps.json",
+"en": "Roukanken",
+"ko": "누관검"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/FMW4Youmu01Weps.json",
+"en": "Half-Ghost",
+"ko": ""
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/FMW4Youmu01Weps.json",
+"en": "Flashing Cherry Blossoms",
+"ko": ""
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/FMW4Youmu01Weps.json",
+"en": "Meditation Slash",
+"ko": ""
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/FMW4Youmu01Weps.json",
+"en": "Five Signs of a Dying Deva",
+"ko": "천인의 오쇠"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/FMW4Youmu01Weps.json",
+"en": "A Single Thought and the Infinite Kalpas",
+"ko": ""
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/FMW4Youmu01Weps.json",
+"en": "200 Yojana in One Slash",
+"ko": "이백유순의 일섬"
+},
+{
+"kind": "data.Special",
+"src": "data4/data_weapon_all/FMW4Youmu01Weps.json",
+"en": "Movement-shaped",
+"ko": "이동형"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/Flan02Weps.json",
+"en": "Scarlet Four of a Kind",
+"ko": ""
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/InsectC01Weps.json",
+"en": "Predation",
+"ko": "포식"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/KappaWeps.json",
+"en": "Cucumber",
+"ko": "오이"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/KappaWeps.json",
+"en": "Monster Cucumber",
+"ko": "괴물 큐컴버"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/KappaWeps.json",
+"en": "Torpedo",
+"ko": "수중어뢰"
+},
+{
+"kind": "data.Special",
+"src": "data4/data_weapon_all/KappaWeps.json",
+"en": "Underwater Only",
+"ko": "수중전용"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/Kedama01Weps.json",
+"en": "Aimed Bullets",
+"ko": "조준탄"
+},
+{
+"kind": "data.Name",
+"src": "data4/data_weapon_all/Kedama01Weps.json",
+"en": "Tackle",
+"ko": "몸통박치기"
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Items/Data_Items.json",
+"en": "Enemy Markering",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Items/Data_Items.json",
+"en": "Range +1 to non-MAP/ non-Range 1 weapons",
+"ko": "맵공격과 최대사정이 1인 공격이외의 공격의 사정+1"
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Land/Data_Land.json",
+"en": "String",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Name/Data_Name.json",
+"en": "Reimu",
+"ko": "레이무"
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Name/FMW4YoumuName.json",
+"en": "Youmu",
+"ko": "요우무"
+},
+{
+"kind": "Data.Name1",
+"src": "data5-4/Data_PairName/Data_PairName.json",
+"en": "Even in your SRPG/ FOE",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/BWJudgmentFMW4PS.json",
+"en": "Black-and-White Judgment (FMW4)",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/BWJudgmentFMW4PS.json",
+"en": "Rounds up damage dealt and Accuracy rate for both units in Eiki's team.\nDamage dealt is rounded up to the nearest multiple of 1000,\nwhile Accuracy rate is rounded up to the nearest multiple of 10%.",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/BWJudgmentOGCBPS.json",
+"en": "Black-and-White Judgment (OG CB)",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/BWJudgmentOGCBPS.json",
+"en": "For one turn, the unit's damage will be fixed at <VAL1> points. \nDoes not work on units with 'Special Resistance'. \n(Usable <COUNT> times.)",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/BoundFocUnfocPS.json",
+"en": "Boundary of Focused and Unfocused",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/BoundFocUnfocPS.json",
+"en": "Switches the Focused and Unfocused modes of all other allied units.\nThis effect also applies to units that have already acted.\n(Usable <COUNT> times.)",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/BoundOffDefPS.json",
+"en": "Boundary of Offense and Defense",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/BoundOffDefPS.json",
+"en": "For one turn/ reverses the attack order for all battles between allied and enemy units.\nAdditionally, Player Support Attacks still only occur during the Player Phase,\nwhile Player Support Defends only occur during the Enemy Phase. (Usable <COUNT> times.)",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/BoundOrigDreamBondsPS.json",
+"en": "Boundary of Dreams and Bonds (Original)",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/BoundOrigDreamBondsPS.json",
+"en": "For one turn/ all frontline allied units are considered adjacent to each other.\nThis does not affect Support or Combined unit actions.\n(Usable <COUNT> times.)",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/BoundVanRearPS.json",
+"en": "Boundary of Vanguard and Rearguard",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/BoundVanRearPS.json",
+"en": "Switches the frontline and backline positions of all other allied units in a team.\nThis effect also applies to units that have already acted.\n(Usable <COUNT> times.)",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/ContractRemiliaPS.json",
+"en": "Devil's Contract",
+"ko": "악마 계약"
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/ContractRemiliaPS.json",
+"en": "Grants a buff that sets a unit's Night Terrain Rating to S,\nin exchange for <VAL1>% of their max HP.\n(Usable <COUNT> times.)",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/FMW4YoumuPS.json",
+"en": "Ghostly Wheel of Pain (FMW4)",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/FMW4YoumuPS.json",
+"en": "Increases the activation rate of Afterimage (Youmu) by +<VAL2>%.",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/FixedStarsPS.json",
+"en": "Fixed Stars on Earth",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/FixedStarsPS.json",
+"en": "All squares in the <VAL1>-square radius around the unit are set to Day terrain.\nThe terrain modifier also affects Wriggle's partner.\nDoes not affect unit and weapon Night Ratings that are at least S.",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/KoaBlockPS.json",
+"en": "Koa Block",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/KoaBlockPS.json",
+"en": "Unit gains a <VAL1>% chance to automatically Defend against attacks.",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/MarkWindPS.json",
+"en": "Mark of the Wind",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/MarkWindPS.json",
+"en": "Consume <VAL1>% Faith to cast Miracle on this unit.\n(Usable <COUNT> times.)",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/NoblessePS.json",
+"en": "Noblesse Oblige",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/NoblessePS.json",
+"en": "For one turn/ grants the ability Salamander Shield to all adjacent units.\nThis effect also applies to the unit's partner. (Usable <COUNT> times.)",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/OmikujiBombPS.json",
+"en": "Omikuji Bomb",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/OmikujiBombPS.json",
+"en": "Modifies damage dealt by a factor ranging from -<VAL1>% to +<VAL2>%.\nThis effect is randomly set at the beginning of each turn.",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/ParasolPS.json",
+"en": "Nanny's Parasol",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/ParasolPS.json",
+"en": "50% of the damage taken by the frontline unit is shared with the backline unit.\nThis applies to both units in the pair but does not work during Graze.\nIneffective if the backline unit is shot down or the shared damage exceeds the backline unit's HP.",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/SarutahikoPS.json",
+"en": "Sarutahiko's Guidance",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/SarutahikoPS.json",
+"en": "At 120+ Power/ unit's pair gains +10% evasion rate and +1 Unfocused Move.",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/SpoilerPS.json",
+"en": "Youkai Power Spoiler",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/SpoilerPS.json",
+"en": "Replenishes <VAL1> MP when the unit's team defeats an enemy.\nSanae must be in the frontline for this skill to activate.",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_Skills/TripWirePS.json",
+"en": "Trip Wire",
+"ko": ""
+},
+{
+"kind": "Data.VAL3",
+"src": "data5-4/Data_Skills/TripWirePS.json",
+"en": "||In addition, Alice can chain 1 extra doll in Seeker Wire's path.|In addition, Alice can chain 1 extra doll in Seeker Wire's path.|In addition, Alice can chain 2 extra dolls in Seeker Wire's path.\nFinally, increases the number of uses of Create Doll (Hourai) by +1.|",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Skills/TripWirePS.json",
+"en": "Increases Seeker Wire's ATK by +<VAL1> and Range by +<VAL2>.\n<VAL3>",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Specials/Data_Specials.json",
+"en": "String",
+"ko": ""
+},
+{
+"kind": "Data.VAL3",
+"src": "data5-4/Data_Specials/Data_Specials.json",
+"en": "Number",
+"ko": ""
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Spirits/Restore_NA_SpiritName.json",
+"en": "No Spirit will be learned in this slot.",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_States/Data_States.json",
+"en": "Princess's Privilege",
+"ko": ""
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_States/Data_States.json",
+"en": "Boundary of Dreams and Bonds",
+"ko": "꿈과 인연의 경계"
+},
+{
+"kind": "Data.Name",
+"src": "data5-4/Data_States/Data_States.json",
+"en": "Terrain Increase (Night)",
+"ko": "적응상승(밤)"
+},
+{
+"kind": "Data.Text",
+"src": "data5-4/Data_Text/Data_Text.json",
+"en": "MEL",
+"ko": ""
+}
+]

@@ -1,0 +1,16 @@
+# ===== 분석파일: 게임 원본·추출물·외부 배포물·중간 빌드 (저작권 + 용량) =====
+분석파일/orig/
+분석파일/orig_en/
+분석파일/orig_en_game/
+분석파일/extracted/
+분석파일/extracted_en/
+분석파일/survey/
+분석파일/kr_src/
+분석파일/mods_src/
+분석파일/build/
+분석파일/backup/
+분석파일/dist_old/
+*.win
+__pycache__/
+
+# ===== 패치파일: README + zip 만 커밋 =====

@@ -1,0 +1,121 @@
+{
+ "_note": "push.s replacements in mod code, scoped per script. Same EN string must map to the same KO everywhere it is compared (Koa Block / Straw Doll Kamikaze / Value:).",
+ "gml_Object_ObjMods_Draw_64": {
+  "■ Mod Settings": "■ 모드 설정",
+  "Mod Settings have been changed for this page.": "이 페이지의 모드 설정이 변경되었습니다.",
+  "Mod Settings have been changed.": "모드 설정이 변경되었습니다.",
+  "Value:": "값:",
+  "INVALID INPUT!\nField contains empty string or window was cancelled to write an empty string.\nPlease input a valid string with length greater than 0.": "잘못된 입력!\n빈 문자열이 입력되었거나 입력 창이 취소되었습니다.\n1자 이상의 올바른 문자열을 입력하세요.",
+  "INVALID INPUT!\nInputted value is greater than the maximum allowed value.\nPlease set this field to an integer less than or equal to the maximum.": "잘못된 입력!\n입력값이 허용 최댓값보다 큽니다.\n최댓값 이하의 정수를 입력하세요.",
+  "INVALID INPUT!\nInputted value is less than the minimum allowed value.\nPlease set this field to an integer greater than or equal to the minimum.": "잘못된 입력!\n입력값이 허용 최솟값보다 작습니다.\n최솟값 이상의 정수를 입력하세요.",
+  "INVALID INPUT!\nPlease set this field to a valid integer.": "잘못된 입력!\n올바른 정수를 입력하세요."
+ },
+ "gml_Object_ObjMods_Alarm_0": {
+  "No mod folders detected. \nPlease insert valid subfolders into the mods root folder.": "모드 폴더를 찾지 못했습니다.\nmods 폴더 안에 올바른 하위 폴더를 넣어 주세요."
+ },
+ "gml_GlobalScript_mod_util": {
+  "Limit: 1024 characters inputted,\nscrolling display for 20 characters": "최대 1024자까지 입력，\n20자 단위로 스크롤 표시",
+  "Press ENTER to submit input.": "ENTER 키로 입력을 확정합니다.",
+  "Press ESC to cancel input.": "ESC 키로 입력을 취소합니다."
+ },
+ "gml_Object_ObjGlobalMenu_Create_0": {
+  "Mods": "모드",
+  "Debug": "디버그"
+ },
+ "gml_Object_ObjDebug_Create_0": {
+  "Stage Number": "스테이지 번호",
+  "Upgrade Rate": "강화율",
+  "Unlock All Skills in Arc": "현재 장의 스킬 전부 해금",
+  "Add Points": "점수 추가",
+  "Add PP": "PP 추가",
+  "Add WP": "WP 추가",
+  "Add Kills": "격추수 추가",
+  "Turbo Mode": "터보 모드",
+  "Infinite Actions": "무한 행동",
+  "Super Bomb": "슈퍼 영격",
+  "Add Bomb": "영격 추가",
+  "Increment Turn": "턴 증가",
+  "Rig Damage": "대미지 조작",
+  "Preset": "프리셋",
+  "Accuracy (Allies)": "명중률(아군)",
+  "Accuracy (Enemies)": "명중률(적군)",
+  "Prob. Rate (Allies)": "발동확률(아군)",
+  "Prob. Rate (Enemies)": "발동확률(적군)",
+  "HP/SP (Allies)": "HP/SP(아군)",
+  "HP/SP (Enemies)": "HP/SP(적군)",
+  "MP (Allies)": "MP(아군)",
+  "MP (Enemies)": "MP(적군)",
+  "Power (Allies)": "파워(아군)",
+  "Power (Enemies)": "파워(적군)",
+  "Stage Clear Priority": "스테이지 클리어 우선",
+  "Game Over Priority": "게임 오버 우선"
+ },
+ "gml_Object_ObjDebug_Draw_64": {
+  "Chapter End button pressed.\nWould you like to end the stage?": "챕터 종료 버튼을 눌렀습니다.\n스테이지를 종료합니까?",
+  "Chapter Game Over button pressed.\nWould you like to initiate a Game Over?": "챕터 게임 오버 버튼을 눌렀습니다.\n게임 오버로 만듭니까?",
+  "Reloading Intermission.": "인터미션을 다시 불러옵니다.",
+  "Settings have been changed.": "설정이 변경되었습니다.",
+  "Settings have been saved.": "설정이 저장되었습니다."
+ },
+ "gml_GlobalScript_im_nextmap": {
+  "Would you like to play the debug stage?": "디버그 스테이지를 플레이합니까?"
+ },
+ "gml_GlobalScript_UI_battle_info2": {
+  "(F) Friendship Lv.: ": "(전위) 신뢰 Lv.: ",
+  "(F|B) Friendship Lv.: ": "(전위|후위) 신뢰 Lv.: ",
+  "Counter:": "카운터:",
+  "Parry:": "베어내기:",
+  "Shield:": "실드방어:"
+ },
+ "gml_GlobalScript_UI_status_unit": {
+  "Active": "활성",
+  "Inactive": "비활성"
+ },
+ "gml_GlobalScript_get_song_text": {
+  "Acc/Evd+": "명중 회피+",
+  "Acc/Evd++": "명중 회피++",
+  "Def/Skl+": "방어 기량+",
+  "Def/Skl++": "방어 기량++",
+  "Cqb/Rng/Acc+": "격투 사격 명중+",
+  "Cqb/Rng/Acc++": "격투 사격 명중++"
+ },
+ "gml_GlobalScript_draw_unitmenu": {
+  "Full Power Mode": "풀파워모드"
+ },
+ "gml_GlobalScript_calculate_damage_mult": {
+  "Revenge Attack": "역습"
+ },
+ "gml_GlobalScript_check_av_shield": {
+  "Koa Block": "코아 블록"
+ },
+ "gml_GlobalScript_main_det_avoid_action2": {
+  "Koa Block": "코아 블록",
+  "Under One Parasol": "한 우산 아래"
+ },
+ "gml_GlobalScript_check_av_barrier2": {
+  "Salamander Shield": "샐러맨더 실드"
+ },
+ "gml_GlobalScript_graphic_action_psquare": {
+  "Private Square": "프라이빗 스퀘어",
+  "Graze": "그레이즈"
+ },
+ "gml_GlobalScript_demo_straw": {
+  "Straw Doll Kamikaze": "스트로 돌 카미카제"
+ },
+ "gml_GlobalScript_set_room_caption": {
+  "Fantasy Maiden Wars - Dream of the Stray Dreamer - ": "환상소녀대전 - Dream of the Stray Dreamer - "
+ },
+ "gml_GlobalScript_demo_FOK_old": {
+  "Flan|Hehe...": "Flan|후후…",
+  "Flan|Hehe... Ahaha.": "Flan|후후… 아하하.",
+  "Flan|Hehe... Ahaha.\nAha": "Flan|후후… 아하하.\n아하",
+  "ha": "하"
+ },
+ "_int_patches": {
+  "gml_GlobalScript_demo_FOK_old": {
+   "59": 34,
+   "97": 54,
+   "98": 55
+  }
+ }
+}
