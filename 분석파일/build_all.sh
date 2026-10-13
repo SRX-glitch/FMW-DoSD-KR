@@ -20,13 +20,15 @@ EOF
 "$UTMT" load build/data_mod_en.win -s tools/utmt/merge_kr.csx -o build/data_mod_kr.win -f < /dev/null
 python -X utf8 tools/verify_merge.py build/data_mod_kr.win
 "$UTMT" load build/data_mod_kr.win -s tools/utmt/apply_ko.csx -o build/data_mod_kr_ko.win -f < /dev/null
+# our own mod: NG+ carry-over unit count (mods/Modifiers/NGUnitCount.json)
+"$UTMT" load build/data_mod_kr_ko.win -s tools/utmt/apply_ng.csx -o build/data_mod_kr_ko_ng.win -f < /dev/null
 python -X utf8 translate/apply_json.py
-sha1sum build/data_mod_kr_ko.win
+sha1sum build/data_mod_kr_ko_ng.win
 
 # ---- 배포 패키지 (영어 원본 기준 파일별 xdelta) ----
 XD3="${XD3:-xdelta3}"; D=build/FMWCB-1.2.4.1_KR_xdelta
 rm -rf "$D"; mkdir -p "$D/patch/data" "$D/patch/meta" "$D/LocalAppData_fmw_dosd"
-"$XD3" -e -9 -f -S none -B 67108864 -s orig_en/data.win build/data_mod_kr_ko.win "$D/patch/data.win.xdelta"
+"$XD3" -e -9 -f -S none -B 67108864 -s orig_en/data.win build/data_mod_kr_ko_ng.win "$D/patch/data.win.xdelta"
 for f in $(ls kr_src/data); do "$XD3" -e -9 -f -S none -B 67108864 -s orig_en_game/data/$f kr_src/data/$f "$D/patch/data/$f.xdelta"; done
 for f in $(ls kr_src/meta); do "$XD3" -e -9 -f -S none -s orig_en_game/meta/$f kr_src/meta/$f "$D/patch/meta/$f.xdelta"; done
 cp -r build/localappdata/mods build/localappdata/addOns "$D/LocalAppData_fmw_dosd/"

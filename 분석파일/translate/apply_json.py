@@ -39,6 +39,22 @@ for f in glob.glob(S + 'addOns/**/*.json', recursive=True):
                     else: miss.append(f'{f}:{k}:{x!r}')
     dump(j, OUT + os.path.relpath(f, S).replace(os.sep, '/'))
 
+# our own mods (not in FMWCB) — copied as-is
+for f in glob.glob('translate/extra_mods/**/*.json', recursive=True):
+    j = json.load(open(f, encoding='utf8'))
+    dump(j, OUT + 'mods/' + os.path.relpath(f, 'translate/extra_mods').replace(os.sep, '/'))
+    done += 1
+
 print('translated fields', done)
 print('untranslated', len(miss))
 for m in miss: print('  ', m)
+
+# gate: the mod settings window draws its ON/OFF / value box over description lines 10-11
+bad = []
+for f in glob.glob(OUT + '**/*.json', recursive=True):
+    if '/addOns/' in f.replace(os.sep, '/'): continue
+    L = json.load(open(f, encoding='utf8')).get('Desc', '').split('\n')
+    if any(i < len(L) and L[i].strip() for i in (9, 10)): bad.append(f)
+print('desc overlap (lines 10-11):', len(bad))
+for b in bad: print('  !!', b)
+if bad: raise SystemExit(1)

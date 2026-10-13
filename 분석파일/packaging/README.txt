@@ -82,7 +82,7 @@
 
  ■ 그대로 복사하는 파일
 
-   LocalAppData_fmw_dosd\mods\     → [설정 폴더]\mods\     (모드 on/off 설정, 45개)
+   LocalAppData_fmw_dosd\mods\     → [설정 폴더]\mods\     (모드 on/off 설정, 46개)
    LocalAppData_fmw_dosd\addOns\   → [설정 폴더]\addOns\   (추가 유닛·무기·대사, 113개)
 
  ■ 선택 사항
@@ -109,7 +109,7 @@
       명령줄   : xdelta\xdelta.exe -d -s <원본> <패치.xdelta> <결과>
  2) mods, addOns 폴더를 [설정 폴더] 에 복사합니다.
  3) 적용 후 data.win SHA1 이 아래와 같으면 정상입니다.
-      f918ec6b7af227aa23da265690c3a1d82f06b550
+      78977cad1e23a9aeeffbb3815a83ac73c265573d
 
 
 ----------------------------------------------------------------------
