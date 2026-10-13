@@ -69,6 +69,13 @@ Fantasy Maiden Wars DoSD\
 
 파일별 적용 위치와 수동 설치 방법(xdeltaUI 사용)은 zip 안의 `README.txt` 에 있습니다.
 
+## 업데이트 기록
+
+| 날짜 | 내용 | 이미 설치했다면 |
+|---|---|---|
+| 2026-10-13 | 모드 설명 6개를 실제 동작에 맞게 수정 (`EnableAllUnitsNG+`: 인원 무제한이 아니라 **후보 추가**, 인원은 6명 그대로 등) | 게임 동작은 같습니다. 새 설명을 보려면 zip의 `LocalAppData_fmw_dosd\mods` 를 `%LOCALAPPDATA%\fmw_dosd\` 에 덮어쓰기 (모드 ON/OFF 설정은 초기화됨) |
+| 2026-09-27 | 게임이 `C:\Program Files (x86)\` 에 있을 때 `install.bat` 이 바로 꺼지던 문제 수정 | zip을 다시 받아 설치 |
+
 ## 제보 · 피드백
 
 위 표로 해결되지 않거나 오역·번역 누락을 발견하면
