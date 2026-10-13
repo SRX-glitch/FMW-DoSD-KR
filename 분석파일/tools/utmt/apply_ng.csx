@@ -1,7 +1,9 @@
 // Custom mod (ours, not in FMWCB): NG+ (Dream Mode) carry-over unit count.
 // global ngUnitCount (mods/Modifiers/NGUnitCount.json, Type 2 = [Value, Min, Max]):
 //   6 = vanilla, 0 = unlimited.  Confirm is allowed with 1..cap units (vanilla: exactly 6).
-// Only gml_GlobalScript_UI_NG_list changes; every other script that reads global.u_code0 only tests membership.
+// Changes UI_NG_list (selection) + UI_NG_load/UI_NG_show_units (departure photo, fixed 6+Meko+Makura layout).
+// Other readers of global.u_code0 only test membership.
+// ⛔ 2026-10-13: the first version patched only UI_NG_list and crashed in UI_NG_load with != 6 units (user report).
 using System.IO;
 using System.Linq;
 
@@ -75,5 +77,33 @@ Swap(loop, many);
 File.WriteAllText(Path.Combine(W, "build", NAME + ".patched.gml"), src);
 var grp = new UndertaleModLib.Compiler.CodeImportGroup(Data);
 grp.QueueReplace(NAME, src);
+
+// ---- departure "group photo" (UI_NG_load / UI_NG_show_units) assumed exactly 6 units:
+//      slots 0-5 = carried units, 6 = Meko, 7 = Makura.  Fix the layout at 8 slots:
+//      fewer than 6 -> empty slots (-1, already skipped by show_units), more than 6 -> first 6 shown.
+string Load(string name)
+{
+    return new Underanalyzer.Decompiler.DecompileContext(g, Data.Code.ByName(name), Data.ToolInfo.DecompilerSettings).DecompileToString();
+}
+
+src = Load("gml_GlobalScript_UI_NG_load");
+Swap("for (var i = 0; i < (ds_list_size(arg0) + 2); i += 1)",
+     "for (var i = 0; i < 8; i += 1)");
+Swap("        if (!debug)\n",
+     "        if (i < 6 && i >= ds_list_size(arg0))\n" +
+     "        {\n" +
+     "            spr = -1;\n" +
+     "            spr2 = -1;\n" +
+     "        }\n" +
+     "        else if (!debug)\n");
+File.WriteAllText(Path.Combine(W, "build", "gml_GlobalScript_UI_NG_load.patched.gml"), src);
+grp.QueueReplace("gml_GlobalScript_UI_NG_load", src);
+
+src = Load("gml_GlobalScript_UI_NG_show_units");
+Swap("var i = (ds_list_size(arg0) - 1) + (2 * arg1);",
+     "var i = 5 + (2 * arg1);");
+File.WriteAllText(Path.Combine(W, "build", "gml_GlobalScript_UI_NG_show_units.patched.gml"), src);
+grp.QueueReplace("gml_GlobalScript_UI_NG_show_units", src);
+
 grp.Import();
-Console.WriteLine("apply_ng: " + NAME + " patched and recompiled");
+Console.WriteLine("apply_ng: UI_NG_list, UI_NG_load, UI_NG_show_units patched and recompiled");

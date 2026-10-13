@@ -73,6 +73,7 @@ Fantasy Maiden Wars DoSD\
 
 | 날짜 | 내용 | 이미 설치했다면 |
 |---|---|---|
+| 2026-10-13 | **[테스트 중] NGUnitCount 오류 수정**: 6명이 아닌 인원으로 인계를 확정하면 출발 화면에서 「DoAdd :: Execution Error at gml_Script_UI_NG_load」로 꺼지던 문제. 출발 사진은 최대 6명+메코·마쿠라로 표시(인계는 전원) | Steam 무결성 검사 후 **새 zip으로 다시 설치** |
 | 2026-10-13 | **[테스트 중] 새 모드 항목 `NGUnitCount`** (모드 설정 → Modifiers): 주회 플레이에서 데려갈 유닛 수 상한 변경. 6 = 기본, **0 = 제한 없음**, 1명 이상이면 진행 가능. 드림 모드 화면 실기 검증 전이라 이상하면 Issues로 알려 주세요 | `data.win` 이 바뀌었으므로 Steam 무결성 검사 후 **새 zip으로 다시 설치** |
 | 2026-10-13 | 모드 설정 창에서 ON/OFF·값 칸이 설명 글자와 겹치던 5개 설명 정리 | 위와 같음 (새 zip에 포함) |
 | 2026-10-13 | 모드 설명 6개를 실제 동작에 맞게 수정 (`EnableAllUnitsNG+`: 인원 무제한이 아니라 **후보 추가**, 인원은 6명 그대로 등) | 게임 동작은 같습니다. 새 설명을 보려면 zip의 `LocalAppData_fmw_dosd\mods` 를 `%LOCALAPPDATA%\fmw_dosd\` 에 덮어쓰기 (모드 ON/OFF 설정은 초기화됨) |
