@@ -4,7 +4,7 @@
 //   2) fonts: copy KR font properties + glyphs
 //   3) string-only scripts: EN->KR push.s pairs aligned per script, applied to MOD's code of the same name
 //   4) logic scripts (not touched by the mod): replace with KR's decompiled GML
-// env: FMW_W = workspace root
+// env: FMW_W = workspace root; FMW_KR / FMW_EN = KR donor / EN baseline data.win (rel. to FMW_W), FMW_SCOPE = scope json
 using System.IO;
 using System.Linq;
 using UndertaleModLib.Util;
@@ -16,8 +16,9 @@ UndertaleData Load(string rel)
     using var s = new FileStream(Path.Combine(W, rel), FileMode.Open, FileAccess.Read);
     return UndertaleIO.Read(s);
 }
-var KR = Load(Path.Combine("orig", "data.win"));
-var EN = Load(Path.Combine("orig_en", "data.win"));
+string Env(string k, string d) => Environment.GetEnvironmentVariable(k) ?? d;
+var KR = Load(Env("FMW_KR", Path.Combine("orig", "data.win")));
+var EN = Load(Env("FMW_EN", Path.Combine("orig_en", "data.win")));
 var log = new List<string>();
 
 // ---------- 1) texture pages / page items ----------
@@ -105,7 +106,7 @@ IEnumerable<UndertaleInstruction> PushS(UndertaleCode c) =>
     c.Instructions.Where(i => i.Kind == UndertaleInstruction.Opcode.Push && i.Type1 == UndertaleInstruction.DataType.String);
 
 string[] logic = { "gml_GlobalScript_UI_status_weapon", "gml_Object_ObjResult_Create_0" };
-var scope = System.Text.Json.JsonDocument.Parse(File.ReadAllText(Path.Combine(W, "survey", "merge_scope.json")));
+var scope = System.Text.Json.JsonDocument.Parse(File.ReadAllText(Path.Combine(W, Env("FMW_SCOPE", Path.Combine("survey", "merge_scope.json")))));
 foreach (var nameEl in scope.RootElement.GetProperty("kr").EnumerateArray())
 {
     string name = nameEl.GetString();

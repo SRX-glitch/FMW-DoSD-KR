@@ -4,6 +4,8 @@
 // Changes UI_NG_list (selection) + UI_NG_load/UI_NG_show_units (departure photo, fixed 6+Meko+Makura layout).
 // Other readers of global.u_code0 only test membership.
 // ⛔ 2026-10-13: the first version patched only UI_NG_list and crashed in UI_NG_load with != 6 units (user report).
+// FMWCB 1.2.4.2 caps UI_NG_load/show_units with min(8,..)/min(6,..) for its "Carry Over All Units" (> 6 is fine there),
+// but < 6 still reads list slots that do not exist -> the fixed 8-slot layout below is still needed.
 using System.IO;
 using System.Linq;
 
@@ -27,8 +29,8 @@ Swap("function UI_NG_list(arg0, arg1, arg2)\n{\n",
      "function UI_NG_list(arg0, arg1, arg2)\n{\n" +
      "    var ngCap = optionalOf(\"ngUnitCount\", [6, 0, 99]);\n" +
      "    if (is_array(ngCap))\n    {\n        ngCap = ngCap[0];\n    }\n");
-Swap("ds_list_size(global.u_code0) > 0, ds_list_size(global.u_code0) == 6], 1);",
-     "ds_list_size(global.u_code0) > 0, ds_list_size(global.u_code0) >= 1], 1);");
+Swap("ds_list_size(global.u_code0) > 0, ds_list_size(global.u_code0) == 6, 1], 1);",
+     "ds_list_size(global.u_code0) > 0, ds_list_size(global.u_code0) >= 1, 1], 1);");
 Swap("else if (ds_list_size(global.u_code0) < 6)",
      "else if (ngCap <= 0 || ds_list_size(global.u_code0) < ngCap)");
 Swap("        if (ds_list_size(global.u_code0) == 6)\n",
@@ -87,7 +89,7 @@ string Load(string name)
 }
 
 src = Load("gml_GlobalScript_UI_NG_load");
-Swap("for (var i = 0; i < (ds_list_size(arg0) + 2); i += 1)",
+Swap("for (var i = 0; i < min(8, ds_list_size(arg0) + 2); i += 1)",
      "for (var i = 0; i < 8; i += 1)");
 Swap("        if (!debug)\n",
      "        if (i < 6 && i >= ds_list_size(arg0))\n" +
@@ -100,7 +102,7 @@ File.WriteAllText(Path.Combine(W, "build", "gml_GlobalScript_UI_NG_load.patched.
 grp.QueueReplace("gml_GlobalScript_UI_NG_load", src);
 
 src = Load("gml_GlobalScript_UI_NG_show_units");
-Swap("var i = (ds_list_size(arg0) - 1) + (2 * arg1);",
+Swap("var i = (min(6, ds_list_size(arg0)) - 1) + (2 * arg1);",
      "var i = 5 + (2 * arg1);");
 File.WriteAllText(Path.Combine(W, "build", "gml_GlobalScript_UI_NG_show_units.patched.gml"), src);
 grp.QueueReplace("gml_GlobalScript_UI_NG_show_units", src);

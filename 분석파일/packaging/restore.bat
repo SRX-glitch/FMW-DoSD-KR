@@ -11,7 +11,7 @@ if "%GAME%"=="" (
   set /p "GAME=> "
 )
 if not "%GAME:~-1%"=="\" set "GAME=%GAME%\"
-set "BK=%GAME%backup_before_kr\"
+set "BK=%GAME%backup_before_kr_126\"
 if not exist "%BK%data.win" goto :nobackup
 
 copy /y "%BK%data.win" "%GAME%data.win" >nul

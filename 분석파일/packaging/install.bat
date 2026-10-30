@@ -1,7 +1,7 @@
 @echo off
 chcp 65001 >nul
 setlocal EnableExtensions
-title FMWCB 1.2.4.1 + 한글패치 설치
+title FMWCB 1.2.4.2 + 한글패치 설치 (게임 1.2.6)
 
 rem ---- 경로 결정: 이 폴더에 fmw_dosd.exe가 있으면 여기, 아니면 인자/입력으로 받는다
 set "HERE=%~dp0"
@@ -24,7 +24,7 @@ set "TMPD=%GAME%_kr_patch_tmp\"
 if exist "%TMPD%" rmdir /s /q "%TMPD%"
 mkdir "%TMPD%data" "%TMPD%meta"
 
-echo [1/3] 패치 파일 생성 중... (원본이 영어판 1.2.4가 아니면 여기서 중단됩니다)
+echo [1/3] 패치 파일 생성 중... (원본이 영어판 1.2.6이 아니면 여기서 중단됩니다)
 "%XD%" -d -f -s "%GAME%data.win" "%PT%data.win.xdelta" "%TMPD%data.win" || goto :srcfail
 for %%F in ("%PT%data\*.xdelta") do (
   "%XD%" -d -f -s "%GAME%data\%%~nF" "%%~fF" "%TMPD%data\%%~nF" || goto :srcfail
@@ -34,7 +34,8 @@ for %%F in ("%PT%meta\*.xdelta") do (
 )
 
 echo [2/3] 원본 백업 후 교체 중...
-set "BK=%GAME%backup_before_kr\"
+rem 버전별 백업 폴더: 1.2.4용 패키지가 남긴 backup_before_kr\ (1.2.4 원본)과 섞이지 않게 한다
+set "BK=%GAME%backup_before_kr_126\"
 if not exist "%BK%data.win" (
   mkdir "%BK%data" "%BK%meta" 2>nul
   copy /y "%GAME%data.win" "%BK%data.win" >nul
@@ -52,11 +53,14 @@ if not exist "%LA%" mkdir "%LA%"
 if exist "%LA%mods" if not exist "%BK%LocalAppData\mods" xcopy /e /i /q /y "%LA%mods" "%BK%LocalAppData\mods" >nul
 if exist "%LA%addOns" if not exist "%BK%LocalAppData\addOns" xcopy /e /i /q /y "%LA%addOns" "%BK%LocalAppData\addOns" >nul
 xcopy /e /i /q /y "%HERE%LocalAppData_fmw_dosd\mods" "%LA%mods" >nul || goto :fail
+rem FMWCB 1.2.4.2: 이전 버전의 더미 addOn이 남아 있으면 시작할 때 꺼진다 -> 위에서 백업한 뒤 비우고 새로 복사
+if exist "%LA%addOns" rmdir /s /q "%LA%addOns"
 xcopy /e /i /q /y "%HERE%LocalAppData_fmw_dosd\addOns" "%LA%addOns" >nul || goto :fail
 
 echo.
 echo 설치 완료! 원본은 %BK% 에 백업되었습니다.
 echo 게임 안 글로벌 메뉴 - 「모드」 에서 모드를 켜고 끌 수 있습니다.
+echo 세이브는 %LOCALAPPDATA%\fmw_dosd\savedata 를 그대로 씁니다.
 pause
 exit /b 0
 
@@ -67,7 +71,7 @@ goto :fail
 
 :srcfail
 echo.
-echo [오류] 원본 파일이 맞지 않습니다. 이미 패치했거나 영어판 1.2.4 원본이 아닙니다.
+echo [오류] 원본 파일이 맞지 않습니다. 이미 패치했거나 영어판 1.2.6 원본이 아닙니다.
 echo        Steam에서 「로컬 파일 무결성 검사」를 한 뒤 다시 실행하세요. 게임 파일은 바뀌지 않았습니다.
 if exist "%TMPD%" rmdir /s /q "%TMPD%"
 :fail

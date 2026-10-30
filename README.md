@@ -1,7 +1,7 @@
 # 환상소녀대전 DoSD 한글패치 + FMWCB 모드 통합 패치
 
-Steam **Fantasy Maiden Wars - Dream of the Stray Dreamer -** 영어판에
-**한글패치(260529)** 와 커뮤니티 모드 **FMWCB 1.2.4.1**을 함께 적용하는 통합 패치입니다.
+Steam **Fantasy Maiden Wars - Dream of the Stray Dreamer -** 영어판 **1.2.6**에
+**한글패치(261030)** 와 커뮤니티 모드 **FMWCB 1.2.4.2**(1.2.6에 맞춰 이식)를 함께 적용하는 통합 패치입니다.
 모드가 추가한 메뉴·설명·대사·유닛/무기 이름도 한글패치 용어에 맞춰 한글화했습니다.
 
 ## 👉 [패치 받기 · 설치 방법 (패치파일/)](패치파일)

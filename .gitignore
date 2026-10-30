@@ -10,6 +10,11 @@
 분석파일/build/
 분석파일/backup/
 분석파일/dist_old/
+분석파일/orig_en_new/
+분석파일/orig_en_new_game/
+분석파일/extracted_en126/
+분석파일/kr_src_261030/
+분석파일/mods_src_1242/
 *.win
 __pycache__/
 

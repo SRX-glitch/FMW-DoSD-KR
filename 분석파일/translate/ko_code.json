@@ -48,24 +48,26 @@
   "Power (Allies)": "파워(아군)",
   "Power (Enemies)": "파워(적군)",
   "Stage Clear Priority": "스테이지 클리어 우선",
-  "Game Over Priority": "게임 오버 우선"
+  "Game Over Priority": "게임 오버 우선",
+  "Fully Unlock All Skills": "스킬 전부 해금"
  },
  "gml_Object_ObjDebug_Draw_64": {
   "Chapter End button pressed.\nWould you like to end the stage?": "챕터 종료 버튼을 눌렀습니다.\n스테이지를 종료합니까?",
   "Chapter Game Over button pressed.\nWould you like to initiate a Game Over?": "챕터 게임 오버 버튼을 눌렀습니다.\n게임 오버로 만듭니까?",
   "Reloading Intermission.": "인터미션을 다시 불러옵니다.",
   "Settings have been changed.": "설정이 변경되었습니다.",
-  "Settings have been saved.": "설정이 저장되었습니다."
+  "Settings have been saved.": "설정이 저장되었습니다.",
+  "Press the Enter key/Menu button to end the chapter.": "Enter 키/메뉴 버튼으로 챕터를 종료합니다.",
+  "Press the Tab key/View button to force a Game Over.": "Tab 키/보기 버튼으로 강제 게임 오버합니다.",
+  "Unlock All Skills in Arc option enabled.\nThis will unlock all Personal Skills that are learned up to the level cap\nin the current arc for the current available roster.\nDoes not include Personal Skills learned through events.\nSaving the game after the Intermission has been reloaded\nwill permanently add these new skills to each character.\n\nWould you like to apply this change?": "「현재 장의 스킬 전부 해금」이 켜져 있습니다.\n현재 편성 가능한 캐릭터 전원이 현재 장의 레벨 상한까지\n배우는 개인 스킬을 모두 해금합니다.\n이벤트로 배우는 개인 스킬은 포함되지 않습니다.\n인터미션을 다시 불러온 뒤 세이브하면\n새 스킬이 각 캐릭터에 영구적으로 추가됩니다.\n\n이 변경을 적용하시겠습니까?",
+  "Fully Unlock All Skills option enabled.\nThis will unlock all Personal Skills\nregardless of level and event flags for the current available roster.\nSaving the game after the Intermission has been reloaded\nwill permanently add these new skills to each character.\n\nWould you like to apply this change?": "「스킬 전부 해금」이 켜져 있습니다.\n현재 편성 가능한 캐릭터 전원의 개인 스킬을\n레벨·이벤트 조건과 관계없이 모두 해금합니다.\n인터미션을 다시 불러온 뒤 세이브하면\n새 스킬이 각 캐릭터에 영구적으로 추가됩니다.\n\n이 변경을 적용하시겠습니까?"
  },
  "gml_GlobalScript_im_nextmap": {
   "Would you like to play the debug stage?": "디버그 스테이지를 플레이합니까?"
  },
  "gml_GlobalScript_UI_battle_info2": {
   "(F) Friendship Lv.: ": "(전위) 신뢰 Lv.: ",
-  "(F|B) Friendship Lv.: ": "(전위|후위) 신뢰 Lv.: ",
-  "Counter:": "카운터:",
-  "Parry:": "베어내기:",
-  "Shield:": "실드방어:"
+  "(F|B) Friendship Lv.: ": "(전위|후위) 신뢰 Lv.: "
  },
  "gml_GlobalScript_UI_status_unit": {
   "Active": "활성",
@@ -83,14 +85,16 @@
   "Full Power Mode": "풀파워모드"
  },
  "gml_GlobalScript_calculate_damage_mult": {
-  "Revenge Attack": "역습"
+  "Revenge Attack": "역습",
+  "Friendship Bonus": "신뢰 보너스"
  },
  "gml_GlobalScript_check_av_shield": {
   "Koa Block": "코아 블록"
  },
  "gml_GlobalScript_main_det_avoid_action2": {
   "Koa Block": "코아 블록",
-  "Under One Parasol": "한 우산 아래"
+  "Under One Parasol": "한 우산 아래",
+  "Unyielding Spirit": "불굴의 정신"
  },
  "gml_GlobalScript_check_av_barrier2": {
   "Salamander Shield": "샐러맨더 실드"
@@ -98,9 +102,6 @@
  "gml_GlobalScript_graphic_action_psquare": {
   "Private Square": "프라이빗 스퀘어",
   "Graze": "그레이즈"
- },
- "gml_GlobalScript_demo_straw": {
-  "Straw Doll Kamikaze": "스트로 돌 카미카제"
  },
  "gml_GlobalScript_set_room_caption": {
   "Fantasy Maiden Wars - Dream of the Stray Dreamer - ": "환상소녀대전 - Dream of the Stray Dreamer - "
@@ -117,5 +118,49 @@
    "97": 54,
    "98": 55
   }
+ },
+ "gml_GlobalScript_demo_fshooting_beta": {
+  "Yuuka|Where do you think you're looking?\nTurn and face me properly.": "Yuuka|어딜 보고 있는 거야?\n똑바로 이쪽을 마주 보렴."
+ },
+ "gml_GlobalScript_UI_NG_draw": {
+  "Would you like to carry over all base game units into the next playthrough?": "본편의 모든 유닛을 다음 회차로 이어받으시겠습니까?",
+  "Begin your full Dream?": "모든 유닛과 함께 꿈을 시작하겠습니까?"
+ },
+ "gml_GlobalScript_UI_NG_list": {
+  "Carry Over All Units": "모든 유닛 이어받기"
+ },
+ "gml_GlobalScript_UI_NG_select": {
+  "Would you like to choose the resources to bring into NG+?": "다음 회차로 이어받을 자원을 고르시겠습니까?",
+  "Proceed with these options? Any resource that is not selected will be reset in the next playthough.": "이 설정으로 진행하시겠습니까? 선택하지 않은 자원은 다음 회차에서 초기화됩니다."
+ },
+ "gml_GlobalScript_NG_resources": {
+  "Confirm Carryovers": "이어받기 결정",
+  "Select Carryovers": "이어받을 항목 선택",
+  "Resources": "자원",
+  "Points": "점수",
+  "EX-Points": "Ex-P",
+  "Items": "아이템",
+  "Kills": "격추수",
+  "Carry over current Points and all Points accumulated\nover previous playthroughs.": "현재 점수와 이전 회차까지 누적된\n모든 점수를 이어받습니다.",
+  "Carry over current EX-Points and all EX-Points accumulated\nover previous playthroughs.": "현재 Ex-P와 이전 회차까지 누적된\n모든 Ex-P를 이어받습니다.",
+  "Carry over all items accumulated over previous playthoughs.": "이전 회차까지 모은 모든 아이템을 이어받습니다.",
+  "Carry over current PP and all PP accumulated\nover previous playthroughs for every player character.": "모든 아군 캐릭터가 현재 PP와\n이전 회차까지 누적된 모든 PP를 이어받습니다.",
+  "Carry over current Kills and all Kills accumulated\nover previous playthroughs for every player character.": "모든 아군 캐릭터가 현재 격추수와\n이전 회차까지 누적된 모든 격추수를 이어받습니다."
+ },
+ "gml_GlobalScript_UI_info_draw": {
+  "Main": "메인",
+  "Assist": "지원",
+  "Support": "원호",
+  "Final Damage": "최종 대미지"
+ },
+ "gml_GlobalScript_UI_clear_draw": {
+  "Saves/Loads": "세이브/로드횟수",
+  "Total Saves/Loads": "합계세이브/로드횟수",
+  "|NGs|Army Name|Avg. Upgrade %|Highest Damage Dealt|Highest Damage Taken|Vegetables Eaten|Photos Taken|Dream Spirits Cast|": "|주회|부대명|평균 업그레이드 %|최대로 입힌 데미지|최대로 받은 데미지|먹은 채소의 수|찍은 사진 수|「꿈」 사용 횟수|",
+  "|NGs|Army Name|Avg. Upgrade %|Vegetables Eaten|Photos Taken|Dream Spirits Cast|Highest Damage Dealt|Highest Damage Taken|": "|주회|부대명|평균 업그레이드 %|먹은 채소의 수|찍은 사진 수|「꿈」 사용 횟수|최대로 입힌 데미지|최대로 받은 데미지|",
+  "|Forests Purified by Toyohime|Sheep Counters Used by Mehko|Sweet Dreams Induced by Makura|Total Akyu Points|Total Lily White Points|": "|토요히메가 정화한 숲|메코가 사용한 양 카운터|마쿠라가 선사한 스위트 드림|아큐 포인트 합계|릴리 화이트 포인트 합계|"
+ },
+ "gml_GlobalScript_UI_clear_create": {
+  "Fantasy Maiden Wars": "환상소녀대전대"
  }
 }

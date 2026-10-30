@@ -1,7 +1,7 @@
 """Write translated copies of the mod's JSON folders (mods/, experimental_mods/, addOns/) into build/localappdata/.
 Files stay single-line compact UTF-8 (the game reads them with file_text_read_string)."""
 import json, os, glob, re, shutil
-S = 'mods_src/fmw_patches-main/'
+S = os.environ.get('FMW_MODSRC', 'mods_src/fmw_patches-main') + '/'
 OUT = 'build/localappdata/'
 desc = json.load(open('translate/ko_desc.json', encoding='utf8'))
 text = json.load(open('translate/ko_text.json', encoding='utf8'))
